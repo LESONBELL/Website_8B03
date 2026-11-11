@@ -1,0 +1,825 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap');
+
+
+/* ================= CÀI ĐẶT CHUNG ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Be Vietnam Pro', Arial, sans-serif;
+
+    background: #f4fbff;
+
+    color: #17324d;
+
+    line-height: 1.7;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 75px;
+
+    padding: 0 7%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background: rgba(255,255,255,0.9);
+
+    backdrop-filter: blur(15px);
+
+    z-index: 1000;
+
+    border-bottom: 1px solid #d9edf2;
+}
+
+
+.logo {
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    color: #1877a8;
+}
+
+.logo span {
+    color: #57b86a;
+}
+
+
+nav {
+
+    display: flex;
+
+    gap: 35px;
+}
+
+
+nav a {
+
+    color: #29465c;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+
+    color: #39a96b;
+}
+
+
+/* ================= TRANG CHỦ ================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    padding: 130px 8% 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 70px;
+
+    background:
+
+        radial-gradient(
+            circle at 90% 20%,
+            #d8f4df,
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #edf9ff,
+            #ffffff
+        );
+}
+
+
+.hero-content {
+
+    flex: 1;
+}
+
+
+.small-title {
+
+    color: #39a96b;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+
+.hero h1 {
+
+    font-size: clamp(65px, 9vw, 130px);
+
+    line-height: 0.95;
+
+    color: #176d9b;
+
+    font-weight: 800;
+}
+
+
+.hero h1 span {
+
+    color: #52b96c;
+}
+
+
+.hero h2 {
+
+    font-size: 28px;
+
+    margin: 25px 0;
+
+    color: #31566e;
+}
+
+
+.hero-text {
+
+    max-width: 570px;
+
+    font-size: 18px;
+
+    color: #5d7485;
+
+    margin-bottom: 35px;
+}
+
+
+.main-button {
+
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    border-radius: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #2587b7,
+        #49b96c
+    );
+
+    color: white;
+
+    font-weight: 700;
+
+    box-shadow: 0 12px 30px rgba(50,160,150,0.25);
+
+    transition: 0.3s;
+}
+
+
+.main-button:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 18px 35px rgba(50,160,150,0.35);
+}
+
+
+.hero-image {
+
+    flex: 1;
+
+    max-width: 600px;
+
+    position: relative;
+}
+
+
+.hero-image::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -15px;
+
+    border-radius: 30px;
+
+    background: #bfead0;
+
+    transform: rotate(4deg);
+
+    z-index: 0;
+}
+
+
+.hero-image img {
+
+    position: relative;
+
+    z-index: 1;
+
+    border-radius: 25px;
+
+    aspect-ratio: 4/3;
+
+    object-fit: cover;
+
+    box-shadow:
+        0 25px 60px rgba(30,100,130,0.2);
+}
+
+
+/* ================= SECTION ================= */
+
+.section {
+
+    padding: 110px 8%;
+}
+
+
+.section-title {
+
+    margin-bottom: 55px;
+
+    max-width: 750px;
+}
+
+
+.section-title > p:first-child {
+
+    color: #43a96b;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.section-title h2 {
+
+    font-size: 48px;
+
+    line-height: 1.2;
+
+    margin-top: 10px;
+
+    color: #1c6388;
+}
+
+
+.section-title h2 span {
+
+    color: #4bb86b;
+}
+
+
+.description {
+
+    color: #718898;
+
+    margin-top: 15px;
+}
+
+
+/* ================= GIỚI THIỆU ================= */
+
+.about-container {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+.about-image img {
+
+    height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    box-shadow:
+        20px 20px 0 #ccefd8;
+}
+
+
+.about-text h3 {
+
+    font-size: 32px;
+
+    margin-bottom: 20px;
+
+    color: #245b78;
+}
+
+
+.about-text p {
+
+    color: #637d8c;
+
+    font-size: 17px;
+}
+
+
+.values {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-top: 35px;
+}
+
+
+.values div {
+
+    padding: 20px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    border: 1px solid #dceef1;
+
+    display: flex;
+
+    gap: 15px;
+
+    align-items: center;
+}
+
+
+.values strong {
+
+    color: #43ad6b;
+
+    font-size: 20px;
+}
+
+
+.values span {
+
+    font-weight: 600;
+}
+
+
+/* ================= THÀNH TÍCH ================= */
+
+.achievements {
+
+    background: #eef9f4;
+}
+
+
+.achievement-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.achievement-card {
+
+    background: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 35px rgba(30,100,130,0.08);
+
+    transition: 0.4s;
+}
+
+
+.achievement-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 20px 45px rgba(30,100,130,0.15);
+}
+
+
+.achievement-card img {
+
+    height: 240px;
+
+    object-fit: cover;
+}
+
+
+.card-content {
+
+    padding: 28px;
+}
+
+
+.number {
+
+    color: #4bb86b;
+
+    font-weight: 800;
+}
+
+
+.card-content h3 {
+
+    color: #245b78;
+
+    font-size: 22px;
+
+    margin: 10px 0;
+}
+
+
+.card-content p {
+
+    color: #718898;
+}
+
+
+/* ================= HOẠT ĐỘNG ================= */
+
+.activity-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.activity-item {
+
+    padding: 35px 25px;
+
+    border-radius: 20px;
+
+    background: white;
+
+    border: 1px solid #dceef1;
+
+    transition: 0.3s;
+}
+
+
+.activity-item:hover {
+
+    transform: translateY(-7px);
+
+    border-color: #8bd5a2;
+}
+
+
+.icon {
+
+    font-size: 42px;
+
+    margin-bottom: 20px;
+}
+
+
+.activity-item h3 {
+
+    color: #245b78;
+
+    margin-bottom: 10px;
+}
+
+
+.activity-item p {
+
+    color: #718898;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+
+    padding: 50px 8%;
+
+    text-align: center;
+
+    background: #173f58;
+
+    color: white;
+}
+
+
+.footer-logo {
+
+    font-size: 35px;
+
+    font-weight: 800;
+}
+
+
+.footer-logo span {
+
+    color: #67c47d;
+}
+
+
+footer p {
+
+    color: #c8dce5;
+
+    margin-top: 10px;
+}
+
+
+.copyright {
+
+    margin-top: 25px;
+
+    font-size: 14px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+
+        flex-direction: column;
+
+        padding-top: 130px;
+    }
+
+    .about-container {
+
+        grid-template-columns: 1fr;
+    }
+
+    .achievement-grid {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .activity-grid {
+
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+
+        padding: 0 20px;
+    }
+
+    nav {
+
+        display: none;
+    }
+
+    .section {
+
+        padding: 80px 20px;
+    }
+
+    .section-title h2 {
+
+        font-size: 35px;
+    }
+
+    .achievement-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .activity-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .values {
+
+        grid-template-columns: 1fr;
+    }
+
+}/* ===== TRI ÂN 20/11 ===== */
+
+.tribute {
+    min-height: 480px;
+    padding: 100px 10%;
+    margin-top: 75px;
+    background:
+        radial-gradient(circle at 85% 20%, #d8f5e5, transparent 30%),
+        linear-gradient(135deg, #e8f6ff, #f4fff9);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    overflow: hidden;
+    border-radius: 0 0 40px 40px;
+}
+
+.tribute-content {
+    max-width: 700px;
+    z-index: 1;
+}
+
+.tribute-date {
+    color: #299d70;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.tribute-subtitle {
+    color: #247ca5;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-top: 25px;
+}
+
+.tribute h1 {
+    color: #174c70;
+    font-size: clamp(35px, 5vw, 60px);
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.tribute h1 span {
+    color: #35a879;
+}
+
+.tribute-message {
+    color: #527083;
+    font-size: 16px;
+    line-height: 1.9;
+    max-width: 650px;
+}
+
+.tribute-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #2589bd, #43b77c);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.tribute-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px #2589bd44;
+}
+
+.tribute-decoration {
+    font-size: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.flower {
+    animation: float 3s ease-in-out infinite;
+}
+
+.book {
+    animation: float 3s ease-in-out infinite 0.5s;
+}
+
+.heart {
+    animation: float 3s ease-in-out infinite 1s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@media (max-width: 700px) {
+    .tribute {
+        padding: 70px 7%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tribute-decoration {
+        flex-direction: row;
+        font-size: 45px;
+    }
+}
+/* Ảnh cô giáo 20/11 */
+.tribute-photo {
+    flex: 0 0 38%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tribute-photo img {
+    width: 100%;
+    max-width: 400px;
+    height: 420px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 25px;
+    border: 6px solid white;
+    box-shadow: 0 15px 40px rgba(30, 100, 140, 0.18);
+}
+
+@media (max-width: 700px) {
+    .tribute-photo {
+        width: 100%;
+    }
+
+    .tribute-photo img {
+        height: 300px;
+    }
+}
+img {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+    margin: 20px auto;
+}
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 480px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0, 80, 120, 0.15);
+}
